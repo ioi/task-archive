@@ -1,0 +1,69 @@
+# Papuča (wiring)
+
+Dule obično provodi večeri razmenjujući nežnosti sa svojom devojkom u dugim telefonskim razgovorima, ali večeras je taj ritual doveden pod znak pitanja! Naime, Filip je zapeo za papuču koju je Dule nehotice ostavio pored telefonskog stuba, te je u pokušaju da održi ravnotežu počupao sve žice na stubu. Ćtvi je, kao najstasitiji od svih, odlučio da se popne na stub i postavi nove žice, dok je Vlada ceo ovaj čin posmatrao kroz svoje kul naočare.
+
+Vaš zadatak je da pomognete Ćtviju da pomogne Duletu da se i večeras čuje sa devojkom. Vlada će pomoći sam sebi, dok Filipu pomoći nema.
+
+Na stubu se nalazi više pinčika (tj. andraka, andrmoljaca, nešto što štrči ili viri), svaka dva na različitoj visini. Dva pinčika se spajaju žicom. Svaki pinčik može biti na kraju proizvoljnog broja žica. Postoje dve vrste pinčika: crveni i plavi.
+
+Za potrebe ovog problema, telefonski stub ćemo posmatrati kao pravu, a pinčike kao crvene i plave tačke koje se nalaze na nenegativnim celobrojnim koordinatama na toj pravoj. Dužina žice je rastojanje između dva pinčika koje ta žica povezuje.
+
+Povezivanje pinčika žicama je neophodno da zadovoljava sledeće uslove:
+
+1. Svaki pinčik je povezan žicom sa barem jednim pinčikom druge boje.
+1. Ukupna dužina svih žica je najmanja moguća.
+
+## Detalji implementacije
+
+Potrebno je da implementirate sledeću funkciju:
+
+```
+int64 min_total_length(int[] r, int[] b)
+```
+
+* $r$: niz dužine $n$ koji sadrži pozicije crvenih pinčika u rastućem poretku.
+* $b$ niz dužine $m$ koji sadrži pozicije plavih pinčika u rastućem poretku.
+* Ova funkcija treba da vrati najmanju ukupnu dužinu žica, među svim mogućim ispravnim povezivanjima.
+* Primetite da je tip rezultata ove funkcije `int64`.
+
+## Primer
+
+```
+min_total_length([1, 2, 3, 7], [0, 4, 5, 9, 10])
+```
+
+Ovaj primer je ilustrovan na slici ispod.
+![Wiring](wiring.png)
+
+* Stub je prikazan horizontalno.
+* U crno-beloj štampanoj verziji teksta problema, crveni pinčici su tamni, a plavi su svetli.
+* Postoji $4$ crvena pinčika, na pozicijama $1, 2, 3$ i $7$.
+* Postoji $5$ plavih pinčika, na pozicijama $0, 4, 5, 9$ i $10$.
+* Jedno optimalno rešenje je prikazano na gornjoj slici.
+* Ukupna dužina žica u ovom rešenju je $1 + 2 + 2 + 2 + 3 = 10$, što je optimalno. Dakle, funkcija treba da vraća $10$.
+* Primetite da su dve žice povezane na pinčik na poziciji $7$.
+
+## Ograničenja
+
+* $1 \leq n, m \leq 100\,000$,
+* $0 \leq r[i] \leq 10^9$ (za sve $0 \leq i \leq n-1$),
+* $0 \leq b[i] \leq 10^9$ (za sve $0 \leq i \leq m-1$),
+* Svaki od nizova $r$ i $b$ je sortiran u rastućem poretku.
+* Svih $n+m$ vrednosti iz nizova $r$ i $b$ su različite.
+
+## Podzadaci
+
+1. (7 bodova) $n, m \leq 200$,
+1. (13 bodova) Svaki crveni pinčik je na manjoj poziciji od svakog plavog pinčika.
+1. (10 points) Postoji bar jedan pinčik od svake boje među svakih $7$ uzastopnih pinčika.
+1. (25 points) Svi pinčici imaju različite pozicije u opsegu $[1, n+m]$.
+1. (45 points) Nema dodatnih ograničenja.
+
+## Primer grejdera
+
+Grejder čita ulazne podatke u sledećem formatu:
+* linija $1$: $\;\; n \;\; m$
+* linija $2$: $\;\; r[0] \;\;  r[1] \;  \ldots \; r[n-1]$
+* linija $3$: $\;\; b[0] \;\;  b[1] \;  \ldots \; b[m-1]$
+
+Grejder štampa jednu liniju koja sadrži vrednost koju vraća funkcija `min_total_length`.
