@@ -1,0 +1,1 @@
+{"protocol_version": 2, "code": "monuments", "name": "Monuments", "time_limit": 1.0, "memory_limit": 2147483648, "score_precision": 2, "task_type": "Batch", "task_type_params": ["grader", ["", ""], "comparator"], "feedback_level": "oi_restricted"}
