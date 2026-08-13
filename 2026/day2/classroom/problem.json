@@ -1,0 +1,1 @@
+{"protocol_version": 2, "code": "classroom", "name": "Classroom Game", "time_limit": 0.5, "memory_limit": 2147483648, "score_precision": 2, "task_type": "Communication", "task_type_params": [64, "stub", "std_io"], "feedback_level": "oi_restricted"}
