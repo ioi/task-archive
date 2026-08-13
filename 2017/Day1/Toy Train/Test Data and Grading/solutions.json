@@ -1,0 +1,72 @@
+{
+    "train-malek-ac.cpp": {
+        "verdict": "model_solution"
+    },
+    "train-saeed-ac.cpp": {
+        "verdict": "correct"
+    },
+    "train-haas-tl.cpp": {
+        "verdict": "time_limit",
+        "except": {
+            "bitmask": "correct",
+			"singlecharge": "correct"
+        }
+    },
+    "train-saeed-ac.java": {
+        "verdict": "correct"
+    },
+    "train-saeed-ac.pas": {
+        "verdict": "correct"
+    },
+    "train-haas-path.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "path": "correct"
+        }
+    },
+    "train-saeed-bitmask.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "bitmask": "correct"
+        }
+    },
+    "train-saeed-alla.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "alla": "correct"
+        }
+    },
+    "train-saeed-allb.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "allb": "correct"
+        }
+    },
+    "train-saeed-singlecharge.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "singlecharge": "correct"
+        }
+    },
+    "train-saeed-removecycle.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "allb": "correct"
+        }
+    },
+    "train-saeed-wa-alla.cpp": {
+        "verdict": "incorrect"
+    },
+    "train-peyman-wa.cpp": {
+        "verdict": "incorrect"
+    },
+	"train-saeed-tl1.cpp": {
+		"verdict": "time_limit"
+	},
+	"train-saeed-tl2.cpp": {
+		"verdict": "time_limit"
+	},
+	"train-wojteck-tl1.cpp": {
+		"verdict": "time_limit"
+	}
+}

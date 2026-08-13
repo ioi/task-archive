@@ -1,0 +1,41 @@
+{
+	"global_validators": ["validator.cpp"],
+	"subtasks": {
+		"samples":
+		{
+			"index": 0,
+			"score": 0,
+			"validators": []
+		},
+		"path": {
+			"index": 1,
+			"score": 5,
+			"validators": ["validator-path.cpp"]
+		},
+		"bitmask": {
+			"index": 2,
+			"score": 10,
+			"validators": ["validator-bitmask.cpp"]
+		},
+		"alla": {
+			"index": 3,
+			"score": 11,
+			"validators": ["validator-alla.cpp"]
+		},
+		"allb": {
+			"index": 4,
+			"score": 11,
+			"validators": ["validator-allb.cpp"]
+		},
+		"singlecharge": {
+			"index": 5,
+			"score": 12,
+			"validators": ["validator-singlecharge.cpp"]
+		},
+		"full": {
+			"index": 6,
+			"score": 51,
+			"validators": []
+		}
+	}
+}

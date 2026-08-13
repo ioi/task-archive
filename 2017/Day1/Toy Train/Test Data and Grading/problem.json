@@ -1,0 +1,9 @@
+{
+    "name": "train",
+    "code": "train",
+    "title": "Toy Train",
+    "type": "Batch",
+    "time_limit": 2.0,
+    "memory_limit": 256,
+    "description": "Alice and Bob"
+}

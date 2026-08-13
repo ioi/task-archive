@@ -1,0 +1,9 @@
+{
+	"name": "books",
+	"code": "books",
+	"title": "Ancient Books",
+	"type": "Batch",
+	"time_limit": 2.0,
+	"memory_limit": 1024,
+	"description": "library"
+}

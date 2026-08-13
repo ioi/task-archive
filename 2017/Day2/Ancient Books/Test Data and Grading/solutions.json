@@ -1,0 +1,77 @@
+{
+	"haghani-solution.cpp": {
+		"verdict": "model_solution"
+	},
+	"haghani-solution.pas": {
+		"verdict": "correct"
+	},
+	"books_100.cpp": {
+		"verdict": "correct"
+	},
+	"books.java": {
+		"verdict": "correct"
+	},
+	"main.cpp": {
+		"verdict": "correct"
+	},
+	"haghani-solution-wa.cpp": {
+		"verdict": "incorrect"
+	},
+	"books_35.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"n4s0": "correct",
+			"n1000s0": "correct",
+			"n1e6s0": "time_limit"
+		}
+	},
+	"books_50.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"n4s0": "correct",
+			"n1000s0": "correct",
+			"n1e6s0": "correct"
+		}
+	},
+	"dp-n2.cpp": {
+		"verdict": "time_limit",
+		"except": {
+			"n4s0": "correct",
+			"n1000s0": "correct",
+			"n1000s1": "correct"
+		}
+	},
+	"dp-n2-tof.cpp": {
+		"verdict": "time_limit_and_runtime_error",
+		"except": {
+			"n4s0": "correct",
+			"n1000s0": "correct",
+			"n1e6s0": "correct",
+			"n1000s1": "correct"
+		}
+	},
+	"books_20.cpp": {
+		"verdict": "time_limit_and_runtime_error",
+		"except": {
+			"n4s0": "correct"
+		}
+	},
+	"books_70.cpp": {
+		"verdict": "time_limit",
+		"except": {
+			"n4s0": "correct",
+			"n1000s0": "correct",
+			"n1e6s0": "correct",
+			"n1000s1": "correct"
+		}
+	},
+	"books_70.java": {
+		"verdict": "time_limit",
+		"except": {
+			"n4s0": "correct",
+			"n1000s0": "correct",
+			"n1e6s0": "correct",
+			"n1000s1": "correct"
+		}
+	}
+}

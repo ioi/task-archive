@@ -1,0 +1,108 @@
+@subtask samples
+manual		01.in
+
+@subtask n4s0
+permutation 4 3
+permutation 4 5
+permutation 4 22
+permutation 3 4
+permutation 4 12
+permutation 4 23
+permutation 4 18
+permutation 4 20
+permutation 4 0
+permutation 4 2
+permutation 2 0
+permutation 2 1
+permutation 4 17
+permutation 1 0
+permutation 4 4
+permutation 4 9
+permutation 4 14
+permutation 4 8
+
+@subtask n1000s0
+@include n4s0
+gencode	random		1000	0	dgf
+gencode	random		1000	0	fsg
+gencode	bucket		1000	0	1
+gencode	bucket		1000	0	2	rdf
+gencode	bucket		1000	0	2	fds
+gencode	bucket		1000	0	3	sfg
+gencode	bucket		1000	0	4	ojg
+gencode	bucket		1000	0	20	grf
+gencode	bucket		1000	0	33	grf
+gencode	bucket		1000	0	100	gfs
+gencode	childish	1000	0	20	dfg
+
+@subtask n1e6s0
+@include n1000s0
+gencode	random		1000000	0	rfd
+gencode	random		1000000	0	fbd
+gencode	bucket		1000000	0	1		dfs
+gencode	bucket		1000000	0	2		dgf
+gencode	bucket		1000000	0	2		grf
+gencode	bucket		1000000	0	3		asf
+gencode	bucket		1000000	0	10		fgd
+gencode	bucket		1000000	0	151		grd
+gencode	bucket		1000000	0	1000	fgd
+gencode	bucket		1000000	0	1234	dgd
+gencode	bucket		1000000	0	12345	hgf
+gencode	bucket		1000000	0	123456	fgd
+gencode	bucket		1000000	0	54321	rgf
+gencode	childish	1000000	0	1000	dfs
+
+@subtask n1000s1
+@include n1000s0
+manual	tricky-small-01.in
+manual	tricky-small-02.in
+manual	tricky-small-03.in
+gencode	bucket		1000	600	2	rdf
+gencode	bucket		1000	500	2	fds
+gencode	childish	1000	400	20	gdf
+gencode	childish	1000	500	50	fgd
+gencode	normal		1000	500	sgf
+gencode	normal		1000	700	ffd
+gencode	sorted		1000	999
+gencode	long_path	1000	460
+gencode	long_path	1000	530
+gencode	cone		1000	-1	7
+gencode	cone		1000	-1	10
+gencode	cone		1000	-1	30
+gencode	cone		1000	-1	70
+gencode	cone		1000	-1	1
+gencode	cone		1000	-1	2
+gencode	cone		1000	-1	5
+gencode	cone		1000	-1	100
+
+@subtask n1e6s1
+@include n1e6s0 n1000s1
+manual tricky-large-01.in
+manual tricky-large-02.in
+manual tricky-large-03.in
+manual tricky-large-04.in
+manual tricky-large-05.in
+manual tricky-large-06.in
+manual tricky-large-07.in
+manual tricky-large-08.in
+manual tricky-large-09.in
+manual tricky-large-10.in
+gencode	bucket		1000000	600000	2	rdf
+gencode	bucket		1000000	500000	2	fds
+gencode	childish	1000000	400000	200	gdf
+gencode	childish	1000000	500000	500	fgd
+gencode	normal		1000000	500000	sgf
+gencode	normal		1000000	700000	ffd
+gencode	sorted		1000000	999999
+gencode	long_path	1000000	460000
+gencode	long_path	1000000	530000
+gencode	cone		1000000	-1	7
+gencode	cone		1000000	-1	10
+gencode	cone		1000000	-1	30
+gencode	cone		1000000	-1	100
+gencode	cone		1000000	-1	1
+gencode	cone		1000000	-1	2
+gencode	cone		1000000	-1	5
+gencode	cone		1000000	-1	333
+gencode	cone		1000000	-1	1000
+gencode	cone		1000000	-1	10000
