@@ -1,0 +1,11 @@
+/**
+* incorrect: many queries
+*/
+
+#include "souvenirs.h"
+
+void buy_souvenirs(int N, long long P0) {
+    N=N;
+    for(int i = 0; i < 1'000'000'000; i++)
+        transaction(P0 - 1);
+}

@@ -1,0 +1,1 @@
+{"protocol_version": 1, "code": "migrations", "name": "Migrations", "time_limit": 3.0, "memory_limit": 2147483648, "score_precision": 2, "task_type": "Communication", "task_type_params": "{\"task_type_parameters_Communication_num_processes\": 2}", "feedback_level": "oi_restricted"}

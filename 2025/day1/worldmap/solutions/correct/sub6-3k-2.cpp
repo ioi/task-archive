@@ -1,0 +1,87 @@
+#include "worldmap.h"
+#include <vector>
+#include <iostream>
+using namespace std;
+
+std::vector<std::vector<int> > create_map(int N, int M, std::vector<int> A, std::vector<int> B) {
+	// step #1. preparation
+	vector<vector<int> > G(N);
+	for (int i = 0; i < M; i++) {
+		A[i]--;
+		B[i]--;
+		G[A[i]].push_back(B[i]);
+		G[B[i]].push_back(A[i]);
+	}
+	
+	// step #2. make spanning tree
+	vector<bool> vis(N, false);
+	vector<int> depth(N);
+	vector<int> tour, RA, RB;
+	auto dfs = [&](auto& self, int x) -> void {
+		vis[x] = true;
+		tour.push_back(x);
+		for (int i : G[x]) {
+			if (!vis[i]) {
+				depth[i] = depth[x] + 1;
+				self(self, i);
+				tour.push_back(x);
+			} else if (depth[x] < depth[i]) {
+				RA.push_back(x);
+				RB.push_back(i);
+			}
+		}
+	};
+	dfs(dfs, 0);
+
+	// step #3. construction
+	vector<vector<int> > H(N);
+	for (int i = 0; i < M - (N - 1); i++) {
+		H[RA[i]].push_back(RB[i]);
+	}
+	vector<vector<int> > ans(3 * N, vector<int>(3 * N, 0));
+	vector<bool> used(N, false);
+	int cur = N;
+	for (int i = 0; i < 2 * N - 1; i++) {
+		if (!used[tour[i]]) {
+			int pos = 0;
+			for (int j = 0; j < 3 * N; j++) {
+				int ya = cur - j;
+				if (0 <= ya && ya < 3 * N) {
+					ans[j][ya] = tour[i];
+				}
+				int yb = (cur + 1) - j;
+				if (0 <= yb && yb < 3 * N) {
+					if (pos < int(H[tour[i]].size())) {
+						ans[j][yb] = H[tour[i]][pos];
+						pos++;
+					} else {
+						ans[j][yb] = tour[i];
+					}
+				}
+				int yc = (cur + 2) - j;
+				if (0 <= yc && yc < 3 * N) {
+					ans[j][yc] = tour[i];
+				}
+			}
+			used[tour[i]] = true;
+			cur += 3;
+		} else {
+			for (int j = 0; j < 3 * N; j++) {
+				int ya = cur - j;
+				if (0 <= ya && ya < 3 * N) {
+					ans[j][ya] = tour[i];
+				}
+			}
+			cur += 1;
+		}
+	}
+
+	// step #4. final step
+	for (int i = 0; i < int(ans.size()); i++) {
+		for (int j = 0; j < int(ans.size()); j++) {
+			ans[i][j]++;
+		}
+	}
+
+	return ans;
+}

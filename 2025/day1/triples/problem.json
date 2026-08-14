@@ -1,0 +1,1 @@
+{"protocol_version": 1, "code": "triples", "name": "Triple Peaks", "time_limit": 2.0, "memory_limit": 2147483648, "score_precision": 2, "task_type": "BatchAndOutput", "task_type_params": "{\"task_type_parameters_BatchAndOutput_compilation\": \"grader\"}", "feedback_level": "oi_restricted"}
